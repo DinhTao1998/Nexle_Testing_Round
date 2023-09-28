@@ -7,6 +7,8 @@ Please run : flutter packages pub run build_runner build
 to injection dependencies before run Project
 
 ## Images
+<img src="Sing-up_screen_default.jpg" width="300">
+
 ![Sign up screen - Default](Sing-up_screen_default.jpg)
 ![Sign up screen - Too short](sign-up_screen_too_short.jpg)
 ![Sign up screen - Weak](sign-up_screen_weak.jpg)
