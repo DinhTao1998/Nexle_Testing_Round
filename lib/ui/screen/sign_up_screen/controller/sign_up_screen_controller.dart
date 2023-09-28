@@ -92,7 +92,7 @@ class SignUpScreenController extends GetxController{
     SignInUseCaseOutput caseOutput = await _signInUseCase.execute(SignInUseCaseInput(formData));
     screenLoading.value = false;
     if(caseOutput.result){
-      AuthService.setAuth(caseOutput.authModel!);
+      await AuthService.setAuth(caseOutput.authModel!);
       Get.offAllNamed(AppRouter.CATEGORY_SCREEN);
     }else{
       Get.snackbar('SingIn failure', caseOutput.message,backgroundColor: Colors.red);

@@ -13,8 +13,6 @@ class AuthService{
     _authService = AuthService._(auth);
     ClientService.instance.setAuth = {'Authorization':'Bearer ${_authService?.accessToken()??''}'};
     await LocalStorageService.instance.setValue('auth',jsonEncode(auth.toJson()));
-    String ?_auth = await LocalStorageService.instance.getValue('auth');
-    print(_auth);
   }
 
   deleteAuth(){
